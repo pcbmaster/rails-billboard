@@ -1,1 +1,6 @@
-<h1><%= @artist.id ? 'Edit Artist' : 'Create Artist'
+<h1><%= @artist.id ? 'Edit Artist' : 'Create Artist' %></h1>
+<hr />
+<%= form_for @artist do |i| %>
+  <%= i.label :name %>
+  <%= i.submit %>
+<% end %>
