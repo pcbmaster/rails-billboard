@@ -1,2 +1,9 @@
-<h1>Billboards#index</h1>
-<p>Find me in app/views/billboards/index.html.erb</p>
+<h1 class="ui heading">Billboards</h1>
+<%= link_to 'New Board', new_topboard_path, class: 'ui green button' %>
+<br>
+<br>
+<% @topboards.each do |topboard| %>
+  <%= link_to topboard.name, topboard_path(topboard), class: 'ui blue button' %>
+  <%= link_to 'Edit Board', edit_topboard_path(topboard), class:'ui button'%>
+  <%= link_to 'Delete Board', topboard_path(topboard), {method: :delete, class:'ui red button'}%>
+<% end %>
