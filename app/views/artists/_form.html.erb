@@ -2,5 +2,6 @@
 <hr />
 <%= form_for @artist do |i| %>
   <%= i.label :name %>
+  <%= i.text_field :name, require: true, autofocus: true %>
   <%= i.submit %>
 <% end %>
