@@ -1,8 +1,8 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :edit, :update, :destroy]
-#  def index
-#    
-#  end
+#  before_action :set_song, only: [:show, :edit, :update, :destroy] this breaks everything?
+  def index
+    
+  end
 
   def show
     @song = Song.find(params[:id])
