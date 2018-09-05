@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :set_song, only: [:show, :edit, :update, :destroy]
 #  def index
 #    
 #  end
@@ -12,6 +13,6 @@ class SongsController < ApplicationController
   end
 
   def edit
-    @song Song.find(params[:id])
+    @song = Song.find(params[:id])
   end
 end
