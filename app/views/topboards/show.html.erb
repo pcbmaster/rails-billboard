@@ -1,2 +1,5 @@
-<h1>Billboards#show</h1>
-<p>Find me in app/views/billboards/show.html.erb</p>
+<% @topboard.songs.each do |song| %>
+  <%= song.name %>,
+  <%= song.artist.name %>
+  <br>
+<% end %>
