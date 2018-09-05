@@ -1,8 +1,8 @@
 class TopboardsController < ApplicationController
-  before_action: set_topboard, only [:show, :edit, :new, :destroy ]
+  before_action :set_topboard, only: [:show, :edit, :destroy, :update ]
   
   def index
-    @Topboards = Topboard.all
+    @topboards = Topboard.all
   end
 
   def show
@@ -28,7 +28,7 @@ class TopboardsController < ApplicationController
 
   def update
     if @topboard.update(topboard_params)
-      redirect_to topboard_path(@topboard)
+      redirect_to topboards_path
     else
       render :edit
     end
@@ -45,6 +45,6 @@ class TopboardsController < ApplicationController
     end
 
     def topboard_params
-      params.require(:sub).permit(:name)
+      params.require(:topboard).permit(:name)
     end
 end
