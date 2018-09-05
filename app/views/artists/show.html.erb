@@ -6,3 +6,9 @@
   <%= link_to 'Edit Artist', edit_artist_path(@artist) %>
   <br />
   <%= link_to 'Fire Artist', @artist, method: :delete %>
+
+  <% @artist.songs.each do |song| %>
+    <%= song.name %>,
+    
+    <br>
+  <% end %>
