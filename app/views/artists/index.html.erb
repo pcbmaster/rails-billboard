@@ -1,7 +1,15 @@
 <h1 class="ui center aligned header title">Artists   &#9836; </h1>
 <%= link_to 'Add new Artist', new_artist_path %>
-<ul>
+
+
+<div>
 <% @artists.each do |i| %>
-  <li><%= link_to i.name, i %></li>
-  <% end %>
-  </ul>
+  <div class="ui middle aligned animated list">
+  <div class="item">
+    <div class="content">
+      <div class="header"><%= link_to i.name, i %></div>
+    </div>
+    </div>
+    </div>
+    <% end %>
+ </div>
