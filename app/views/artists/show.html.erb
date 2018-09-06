@@ -1,14 +1,14 @@
 <h1><%= @artist.name %></h1>
 <hr />
 <p> Options </p>
-  <%= link_to 'View Artists', artist_song_path(@artist) %>
-  <br />
-  <%= link_to 'Edit Artist', edit_artist_path(@artist) %>
-  <br />
-  <%= link_to 'Fire Artist', @artist, method: :delete %>
-  <br />
-  <% @artist.songs.each do |song| %>
-    <%= song.name %>
-    
-    <br>
+<%= link_to 'Edit Artist', edit_artist_path(@artist) %>
+<br />
+<%= link_to 'Fire Artist', @artist, method: :delete %>
+<br />
+<% @artist.songs.each do |song| %>
+  <%= song.name class: %>
+  
+  <br>
   <% end %>
+  
+ 
