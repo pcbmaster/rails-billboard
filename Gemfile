@@ -38,3 +38,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #additional gems
 gem 'jquery'
 gem 'semantic-ui-sass'
+gem 'json'
