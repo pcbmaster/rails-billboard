@@ -1,3 +1,6 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "new_song.js" %>
+<% end %>
 <h1><%= @artist.name %></h1>
 <hr />
 <p> Options </p>
@@ -10,5 +13,5 @@
 	<li><%= song.name %></li>
     <% end %>
     </ol>
+    <button id="new_song_button" class="ui right floated button">New Song</button>
 </div>
- 
