@@ -1,5 +1,29 @@
 @import 'semantic-ui';
+@import url('https://fonts.googleapis.com/css?family=Bungee');
 
 .topboard{
   background-image: linear-gradient(-90deg, red, yellow);
+}
+
+.navbar {
+  background:#505e75 !important;
+  font-family: 'Bungee', cursive !important;
+  font-size: 1.5em !important;
+}
+
+a:hover {
+  background-color: #b8c4d8 !important;
+  color: #354f7a !important;
+}
+
+* {
+  background-color: #b6bcc6 !important;
+}
+
+.title {
+  background:#354f7a !important;
+  font-family: 'Bungee', cursive !important;
+  font-size: 3em !important;
+  letter-spacing: 0.2em !important;
+  color: #ebeef4 !important;
 }
