@@ -2,6 +2,7 @@
 <h1><%= @artist.name %></h1>
 <hr />
 <p> Options </p>
+<% if current_user && current_user.admin == true %>
 <%= link_to 'Edit Artist', edit_artist_path(@artist) %>
 <br />
 <%= link_to 'Fire Artist', @artist, method: :delete %>
@@ -13,3 +14,14 @@
     </ol>
     <button id="new_song_button" class="ui right floated button">New Song</button>
 </div>
+<% else %>
+<div>
+    <ol>
+    <% @artist.songs.each do |song| %>
+	<li><%= song.name %></li>
+    <% end %>
+    </ol>
+    <button id="new_song_button" class="ui right floated button">New Song</button>
+</div>
+<% end %>
+
