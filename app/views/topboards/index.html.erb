@@ -1,5 +1,7 @@
 <h1 class="ui center aligned header title">Billboards 	&#9836; </h1>
-<%= link_to 'New Board', new_topboard_path, class: 'ui green button' %>
+<% if current_user && current_user.admin == true %>
+  <%= link_to 'New Board', new_topboard_path, class: 'ui green button' %>
+<% end %>
 <br>
 <br>
 <div class="ui grid">
@@ -15,10 +17,12 @@
         <br>
         <br>
         <br>
-        <div class="ui two bottom attached buttons">
-          <%= link_to 'Edit Board', edit_topboard_path(topboard), class:'ui button'%>
-          <%= link_to 'Delete Board', topboard_path(topboard), {method: :delete, class:'ui red button'}%>
-        </div>
+        <% if current_user && current_user.admin == true %>
+          <div class="ui two bottom attached buttons">
+            <%= link_to 'Edit Board', edit_topboard_path(topboard), class:'ui button'%>
+            <%= link_to 'Delete Board', topboard_path(topboard), {method: :delete, class:'ui red button'}%>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>
