@@ -6,9 +6,15 @@
   <% @topboards.each do |topboard| %>
     <div class="eight wide column">
       <div class="topboard">
-        <div class="ui center aligned header">
-          <%= link_to topboard.name, topboard_path(topboard) %>
+        <br>
+        <br>
+        <br>
+        <div class="ui center aligned grey header">
+          <%= link_to topboard.name, topboard_path(topboard), class: "ui center aligned inverted grey header" %>
         </div>
+        <br>
+        <br>
+        <br>
         <div class="ui two bottom attached buttons">
           <%= link_to 'Edit Board', edit_topboard_path(topboard), class:'ui button'%>
           <%= link_to 'Delete Board', topboard_path(topboard), {method: :delete, class:'ui red button'}%>
