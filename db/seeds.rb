@@ -14,3 +14,5 @@ song_data.each do |song|
   end
   Song.create(name: song["song_title"], artist_id: @artist.id, topboard_id: @top.id)
 end
+
+admin = User.create(email: "admin@test.com", password: "adminpass", admin: true)
